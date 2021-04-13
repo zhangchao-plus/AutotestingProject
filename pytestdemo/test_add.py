@@ -8,8 +8,11 @@ from pytestdemo.Calculator import Calculator
 
 class TestCal():
     def setup(self):
-        print("调用setup方法")
+        print("这是setup方法")
         self.calc = Calculator()
+
+    def teardown(self):
+        print("这是teardown方法")
 
     def test_add1(self):
         assert 2 == self.calc.add(1, 1)
